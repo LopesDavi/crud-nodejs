@@ -1,17 +1,25 @@
+//ADDITION ROUTE
 POST http://localhost:3333/videos
 Content-Type: application/json
 
 {
-  "title": "Video 01",
+  "title": "Video JS",
   "description": "Esse é o video 01",
   "duration": 180
 }
 
 ###
+//ADDITION ROUTE
 GET http://localhost:3333/videos
 
 ###
-PUT http://localhost:3333/videos/4ee49c0f-1625-4001-8605-a968dc39db3a
+//ADDITION ROUTE - QUERY PARAMS
+//Posso utilizar o Query params para buscar coisas específicas
+GET http://localhost:3333/videos?search=node
+
+###
+//UPDATE ROUTE - BY ID
+PUT http://localhost:3333/videos/5c530c11-784a-446b-b9bc-7756ac1dc7ab
 Content-Type: application/json
 
 {
@@ -21,4 +29,5 @@ Content-Type: application/json
 }
 
 ###
-DELETE  http://localhost:3333/videos/4ee49c0f-1625-4001-8605-a968dc39db3a
+//DELETE ROUTE - BY ID
+DELETE  http://localhost:3333/videos/5c530c11-784a-446b-b9bc-7756ac1dc7ab

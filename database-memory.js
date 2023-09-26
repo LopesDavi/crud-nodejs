@@ -5,7 +5,7 @@ export class DatabaseMemory {
   #videos = new Map();
 
   //Método responsável por listar todos os vídeos
-  list() {
+  list(search) {
     //Converter para um array de dados e mapear esse array e pegar o id e as demais informações
     return Array.from(this.#videos.entries()).map((videoArray) => {
       const id = videoArray[0];
@@ -15,7 +15,16 @@ export class DatabaseMemory {
         id,
         ...data,
       };
-    });
+    }).filter(video => {
+      //Se eu tiver uma busca
+      if(search){
+        //quero retornar somente os vídeos em que o título inclui a palavra que foi escrita dentro de search
+        return video.title.includes(search)
+      }
+      //se não tiver uma busca, retorna todos os vídeos
+      return true
+    })
+    
   }
 
   //Método responsável por receber o vídeo e salvar dentro dos #videos
