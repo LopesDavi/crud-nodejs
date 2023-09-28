@@ -1,25 +1,25 @@
 //ADDITION ROUTE
-POST http://localhost:3333/videos
+POST https://api-nodejs-fastify-0gvn.onrender.com/videos
 Content-Type: application/json
 
 {
-  "title": "Video JS",
-  "description": "Esse é o video 01",
-  "duration": 180
+  "title": "Video 03",
+  "description": "Esse é o vídeo 03",
+  "duration": 120
 }
 
 ###
 //ADDITION ROUTE
-GET http://localhost:3333/videos
+GET https://api-nodejs-fastify-0gvn.onrender.com/videos
 
 ###
 //ADDITION ROUTE - QUERY PARAMS
 //Posso utilizar o Query params para buscar coisas específicas
-GET http://localhost:3333/videos?search=node
+GET https://api-nodejs-fastify-0gvn.onrender.com/videos?search=01
 
 ###
 //UPDATE ROUTE - BY ID
-PUT http://localhost:3333/videos/5c530c11-784a-446b-b9bc-7756ac1dc7ab
+PUT https://api-nodejs-fastify-0gvn.onrender.com/videos/5c530c11-784a-446b-b9bc-7756ac1dc7ab
 Content-Type: application/json
 
 {
@@ -30,4 +30,4 @@ Content-Type: application/json
 
 ###
 //DELETE ROUTE - BY ID
-DELETE  http://localhost:3333/videos/5c530c11-784a-446b-b9bc-7756ac1dc7ab
+DELETE  https://api-nodejs-fastify-0gvn.onrender.com/videos/1b39f1f7-5884-42d0-9f8d-8c68f853cb7d
